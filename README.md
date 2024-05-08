@@ -1,10 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+In the src directory, you can run:
 
 ### `npm start`
 
@@ -29,18 +23,28 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+In the backend directory, to start the server, you have to run:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `npx ts-node src/index.ts`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The application architecture follows a typical modern web application structure with a frontend and backend component. Here's a brief analysis of the architecture and the rationale behind the choices made:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Frontend Architecture:
+ - React: Chosen for its declarative and component-based nature, making it easier to build complex user interfaces. React also has a large ecosystem of libraries and tools, which can speed up development.
+ - React Router: Used for client-side routing, enabling navigation within the single-page application (SPA) without full page reloads.
+ - Axios: Employed for making HTTP requests to the backend API. Axios is widely used and provides features like interceptors and easy error handling.
+ - Testing Libraries: Jest is used for unit tests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Backend Architecture:
+ - Node.js with Express.js: Chosen for building the server-side logic due to its non-blocking I/O, scalability, and extensive ecosystem of libraries.
 
-## Learn More
+User Experience (UX):
+In this case, I have decided to use inlineCSS, becouse the solution is quite light and simple and those are the pros:
+ - Scoped Styling
+ - Dynamic Styling
+ - Reduced Tooling Dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ TODOs:
+- Add authentication.
+- Add more filters for user, using cookies to mantain his last filter decision
+- Add an interactive map to let nomads choose directly from the map the available cities and to have a more graphic impact
